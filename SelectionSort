@@ -13,7 +13,16 @@ void swap(int &i, int &j)
 //Function SelectionSort carries out the sorting algorithm itself
 void selectionSort(int *inArray, int n)
 {
-  
+  //I is the first unsorted index, j parses unsorted elements, min is smallest unsorted element
+  int i, j, min;
+  for (int i = 0; i = n-1; i++) //Increment minimum unsorted value every loop
+  {
+    min = i;
+    for (int j = 0; j = n-1; j++) //Find smallest value in unsorted elements
+      if (inArray[j] < inArray[min])
+        min = j;
+    swap(inArray[i], inArray[min]); //Swap smallest unsorted element and first unsorted index
+  }
 }
 
 //Function displayArray displays the array
@@ -42,5 +51,4 @@ int main()
   //Display output
   cout << "Array after selection sort: ";
   displayArray(array, n);
-  
 }
