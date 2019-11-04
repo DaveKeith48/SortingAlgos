@@ -27,5 +27,20 @@ void displayArray(int *inArray, int n)
 //Function main enables flow
 int main()
 {
+  //Input array
+  int n;
+  cout << "Input the number of elements in your array: ";
+  cin >> n;
+  int array[n];
+  cout << "Input your array to be sorted: ";
+  for (int i = 0; i < n; i++)
+    cin >> array[i];
+  cout << "Array before selection sort: ";
+  displayArray(array, n);
+  //Sort array
+  selectionSort(array, n);
+  //Display output
+  cout << "Array after selection sort: ";
+  displayArray(array, n);
   
 }
