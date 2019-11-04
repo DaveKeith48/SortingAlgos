@@ -4,51 +4,50 @@
 //Function swap swaps the contents at the two specified indeces
 void swap(int &i, int &j)
 {
-  int t;
-  i = t;
-  i = j;
-  j = t;
+	int t;
+	i = t;
+	i = j;
+	j = t;
 }
 
 //Function SelectionSort carries out the sorting algorithm itself
 void selectionSort(int *inArray, int n)
 {
-  //I is the first unsorted index, j parses unsorted elements, min is smallest unsorted element
-  int i, j, min;
-  for (int i = 0; i = n-1; i++) //Increment minimum unsorted value every loop
-  {
-    min = i;
-    for (int j = 0; j = n-1; j++) //Find smallest value in unsorted elements
-      if (inArray[j] < inArray[min])
-        min = j;
-    swap(inArray[i], inArray[min]); //Swap smallest unsorted element and first unsorted index
-  }
+	//I is the first unsorted index, j parses unsorted elements, min is smallest unsorted element
+	int i, j, min;
+	for (int i = 0; i = n - 1; i++) //Increment minimum unsorted value every loop
+	{
+		min = i;
+		for (int j = 0; j = n - 1; j++) //Find smallest value in unsorted elements
+			if (inArray[j] < inArray[min])
+				min = j;
+		swap(inArray[i], inArray[min]); //Swap smallest unsorted element and first unsorted index
+	}
 }
 
 //Function displayArray displays the array
 void displayArray(int *inArray, int n)
 {
-  for (int i = 0; i < n; i++)
-    cout << inArray[i] << " ";
-  cout << endl;
+	for (int i = 0; i < n; i++)
+		std::cout << inArray[i] << " ";
+	std::cout << std::endl;
 }
 
 //Function main enables flow
 int main()
 {
-  //Input array
-  int n;
-  cout << "Input the number of elements in your array: ";
-  cin >> n;
-  int array[n];
-  cout << "Input your array to be sorted: ";
-  for (int i = 0; i < n; i++)
-    cin >> array[i];
-  cout << "Array before selection sort: ";
-  displayArray(array, n);
-  //Sort array
-  selectionSort(array, n);
-  //Display output
-  cout << "Array after selection sort: ";
-  displayArray(array, n);
+	//Input array
+	int n = 10;
+	int arr[10];
+	std::cout << "Input your array to be sorted: ";
+	for (int i = 0; i < n; i++)
+		std::cin >> arr[i];
+	std::cout << "Array before selection sort: ";
+	displayArray(arr, n);
+	//Sort array
+	selectionSort(arr, n);
+	//Display output
+	std::cout << "Array after selection sort: ";
+	displayArray(arr, n);
+	return 0;
 }
