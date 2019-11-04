@@ -3,7 +3,19 @@
 //Function insertionSort does the sorting itself
 void insertionSort(int inArray*, int n)
 {
-
+	//i is the index of the element to be sorted, j is the index of the compared element, and currEl is the element being sorted
+	int i, j, currEl;
+	for (int i = 1; i < n; i++)
+	{
+		currEl = inArray[i];
+		j = i - 1;
+		while (j >= 0 && inArray[j] > currEl) //When current element is smaller then prev number, shift it down one
+		{
+			inArray[j + 1] = inArray[j];
+			j = j - 1;
+		}
+		inArray[j + 1] = currEl; //When current element is same size or larger then prev number, 
+	}
 }
 
 //Function printArray prints the array
@@ -18,9 +30,9 @@ void displayArray(int inArray*, int n)
 int main()
 {
   //Input array
-	int n = 10;
-	int arr[10];
-	std::cout << "Input your array to be sorted: ";
+  int n = 10;
+  int arr[10];
+  std::cout << "Input your array to be sorted: ";
 	for (int i = 0; i < n; i++)
 		std::cin >> arr[i];
 	std::cout << "Array before insertion sort: ";
