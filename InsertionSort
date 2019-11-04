@@ -1,0 +1,20 @@
+//Insertion sort starts at index 1 and inserts the next unsorted value into its proper location in the sorted stack
+
+//Function insertionSort does the sorting itself
+void insertionSort(int inArray*, int n)
+{
+
+}
+
+//Function printArray prints the array
+void printArray(int inArray*, int n)
+{
+
+}
+
+//Function main does the order of use
+int main()
+{
+  
+  return 0;
+}
