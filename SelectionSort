@@ -4,7 +4,10 @@
 //Function swap swaps the contents at the two specified indeces
 void swap(int &i, int &j)
 {
-  
+  int t;
+  i = t;
+  i = j;
+  j = t;
 }
 
 //Function SelectionSort carries out the sorting algorithm itself
@@ -16,7 +19,9 @@ void selectionSort(int *inArray, int n)
 //Function displayArray displays the array
 void displayArray(int *inArray, int n)
 {
-  
+  for (int i = 0; i < n; i++)
+    cout << inArray[i] << " ";
+  cout << endl;
 }
 
 //Function main enables flow
