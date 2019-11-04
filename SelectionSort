@@ -1,0 +1,26 @@
+#include <iostream>
+//Selection sort starts at index one and finds the smallest number of the unsorted data, then swaps the current index with the smallest unsorted number
+
+//Function swap swaps the contents at the two specified indeces
+void swap(int &i, int &j)
+{
+  
+}
+
+//Function SelectionSort carries out the sorting algorithm itself
+void selectionSort(int *inArray, int n)
+{
+  
+}
+
+//Function displayArray displays the array
+void displayArray(int *inArray, int n)
+{
+  
+}
+
+//Function main enables flow
+int main()
+{
+  
+}
